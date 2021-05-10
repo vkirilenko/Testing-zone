@@ -61,7 +61,7 @@
     Сокращение (итоговое Summary): периодический сбой кодировок из-за внешних шрифтов.
     Английский вариант: periodic encoding failure caused by external fonts usage.
 
-### Table of short examples: 
+### More of short examples: 
 
 
 Ситуация 	Summary (RUS) 	Summary (ENG)
