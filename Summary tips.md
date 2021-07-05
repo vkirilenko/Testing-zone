@@ -91,3 +91,26 @@ https://habr.com/ru/post/557824/:
 Если вы обнаруживаете, что определенные тестируемые функции тривиальны, еще раз перепроверьте способы стимуляции производительности разработчиков. Одобрение за покрытие или другие бессмысленные метрики могут привести к быстрому разрушению архитектуры.
 
 Будьте скромны в отношении способностей тестов. Тесты не улучшают качество: это делают разработчики
+
+
+Behavior-driven tests goal and realisation example:
+
+'''Feature: widget size
+    Scenario: verify a widget's size
+     Given we have a widget
+     When the widget is valid
+     Then the size is correct'''
+	 
+from behave import *
+
+@given('we have a widget')
+def step_given_a_widget(context):
+    context.widget = Widget('The widget')   
+
+@when('the widget is valid')
+def step_widget_is_valid(context)
+    assert context.widget is not None
+
+@then('the size is correct')
+def step_impl(context):
+    assert context.widget.size() == (50,50)
